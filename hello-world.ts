@@ -5,7 +5,7 @@ addEventListener("fetch", (event) => {
   const ip = event.request.headers.get("x-forwarded-for");
 
   event.respondWith(
-    new Response(`Hello, ${ip}`, {
+    new Response({ip}, {
       status: 200,
       headers: { "content-type": "text/plain" },
     }),
