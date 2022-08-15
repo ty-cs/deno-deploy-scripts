@@ -4,7 +4,7 @@ function handler(_req: Request, connInfo: ConnInfo) {
   const addr = connInfo.remoteAddr as Deno.NetAddr;
   const ip = addr.hostname;
   const json = JSON.stringify({ip});
-
+  console.log('Date.now', new Date()+'');
   return new Response(json, {
       status: 200,
       headers: {
